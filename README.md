@@ -1,9 +1,11 @@
 # Fake News Detection Using Stance Detection
 
-## Description
+## About
 
-Develop a system that uses stance detection to identify fake news. The model would analyze the relationship between claims made in an article and other sources of verified information to assess the truthfulness of the content.
+- <strong>University: </strong>University of Prishtina
+- <strong>Faculty: </strong>Faculty of Electrical and Computer Engineering
+- <strong>Study Program: </strong>Master of Computer and Software Engineering
+- <strong>Subject (2nd year): </strong>Natural Language Processing taught by [Dr. Sc. Mërgim Hoti](https://staff.uni-pr.edu/profile/m%C3%ABrgimhoti)
+- <strong>Students:</strong> [Festina Qorrolli](https://github.com/festinaqorrolli) and [Fisnik Spahija](https://github.com/Fisinik/)
 
-## Innovation
-
-This project focuses on cross-document analysis and logic consistency to combat misinformation.
+The goal of this [project](https://github.com/fisinik/fake-news-detection-using-stance-detection) is to develop a system that uses stance detection to identify fake news. The model analyzes the relationship between claims made in an article and other sources of verified information to assess the truthfulness of the content.. This project is used for the Natural Language Processing course in University of Prishtina, Computer and Software Engineering.
