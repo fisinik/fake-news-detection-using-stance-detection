@@ -9,3 +9,19 @@
 - <strong>Students:</strong> [Festina Qorrolli](https://github.com/festinaqorrolli) and [Fisnik Spahija](https://github.com/Fisinik/)
 
 The goal of this [project](https://github.com/fisinik/fake-news-detection-using-stance-detection) is to develop a system that uses stance detection to identify fake news. The model analyzes the relationship between claims made in an article and other sources of verified information to assess the truthfulness of the content.. This project is used for the Natural Language Processing course in University of Prishtina, Computer and Software Engineering.
+
+## Instructions
+
+This project requires venv environment. This can be done by creating a workspace environment through VScode. Make sure python and pip are installed.
+
+Install kernel for the environment by running the following command in the terminal:
+
+```bash
+pip install ipykernel
+```
+
+Install the necessary packages.
+
+```bash
+pip install -r requirements.txt
+```
