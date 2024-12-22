@@ -107,3 +107,11 @@ Below is the confusion matrix for the Logistic Regression model:
 ### Confusion Matrix for DistilBERT
 
 ![XGBoost Confusion Matrix](distilbert_matrix.png)
+
+### Model Performance Comparison
+
+| Metric              | Logistic Regression | XGBoost |
+| ------------------- | ------------------- | ------- |
+| Training Accuracy   | 80.13%              | 86.34%  |
+| Test Accuracy       | 79.87%              | 83.95%  |
+| Validation Accuracy | 80.59%              | 83.61%  |
