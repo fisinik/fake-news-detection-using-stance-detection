@@ -42,3 +42,33 @@ pip install -r requirements.txt
 - "Subject" <strong>(categorical nominal)</strong>
 - "Date" <strong>(categorical nominal)</strong>
 - "Stance" <strong>(categorical nominal)</strong>
+
+### Data integration
+
+Our datasets are separated as following:
+
+#### FNC-1
+
+train_bodies.csv and train_stances.csv files. These are combined by the "Body ID" to a single dataframe containing all the attributes needed to move forward.
+
+#### FARN
+
+fake_news.csv and real_news.csv files are separated on the stance basis. We combine both datasets into a dataframe and add a stance for both files "FAKE" and "REAL".
+
+### Dataset Size
+
+#### FNC-1
+
+The distribution of `Stance` classes in `train_stances.csv` is as follows:
+
+|  rows | unrelated | discuss |     agree |  disagree |
+| ----: | --------: | ------: | --------: | --------: |
+| 49972 |   0.73131 | 0.17828 | 0.0736012 | 0.0168094 |
+
+#### FARN
+
+The distribution of `Stance` classes in `fake_news.csv` and `real_news.csv` is as follows:
+
+|  rows |   fake |   real |
+| ----: | -----: | -----: |
+| 44919 | 0.5232 | 0.4768 |
