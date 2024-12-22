@@ -25,3 +25,20 @@ Install the necessary packages.
 ```bash
 pip install -r requirements.txt
 ```
+
+## Datasets overview
+
+### Attributes of FNC-1 (4):
+
+- "Headline" <strong>(categorical nominal)</strong>
+- "ArticleBody" <strong>(categorical nominal)</strong>
+- "Body ID" <strong>(categorical nominal)</strong>
+- "Stance" <strong>(categorical nominal)</strong>
+
+### Attributes of FARN (5):
+
+- "Title" <strong>(categorical nominal)</strong>
+- "Text" <strong>(categorical nominal)</strong>
+- "Subject" <strong>(categorical nominal)</strong>
+- "Date" <strong>(categorical nominal)</strong>
+- "Stance" <strong>(categorical nominal)</strong>
