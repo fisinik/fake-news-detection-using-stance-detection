@@ -26,6 +26,8 @@ Install the necessary packages.
 pip install -r requirements.txt
 ```
 
+The datasets can be found here: [FNC-1](https://github.com/FakeNewsChallenge/fnc-1) and [FARN](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset/data)
+
 ## Datasets overview
 
 ### Attributes of FNC-1 (4):
