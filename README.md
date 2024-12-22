@@ -93,3 +93,17 @@ We will evaluate using metrics like Accuracy, F1-score, Recall, and Precision.
 - Precision: It measures the accuracy of positive predictions made by the model. It is calculated as TP / (TP + FP), where TP is True Positives and FP is False Positives. Precision is important when the cost of false positives is high.
 
 - F1 Score: It is the harmonic mean of precision and recall, providing a balance between the two metrics. It is calculated as 2 _ (Precision _ Recall) / (Precision + Recall). F1 score is useful when there is an uneven class distribution, as it considers both false positives and false negatives.
+
+### Confusion Matrix for Logistic Regression
+
+Below is the confusion matrix for the Logistic Regression model:
+
+![Logistic Regression Confusion Matrix](logistic_matrix.png)
+
+### Confusion Matrix for XGBoost
+
+![XGBoost Confusion Matrix](xgboost_matrix.png)
+
+### Confusion Matrix for DistilBERT
+
+![XGBoost Confusion Matrix](distilbert_matrix.png)
