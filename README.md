@@ -72,3 +72,24 @@ The distribution of `Stance` classes in `fake_news.csv` and `real_news.csv` is a
 |  rows |   fake |   real |
 | ----: | -----: | -----: |
 | 44919 | 0.5232 | 0.4768 |
+
+## Training the models
+
+During training, the model learns patterns on the data.
+It is therefore essential to analyze and compare the performance of the model against other algorithms to determine if further additional optimizations are needed.
+
+We will analyze 3 different algorithms which are:
+
+- Logistic Regression
+- XGBoost
+- DistilBERT
+
+We will evaluate using metrics like Accuracy, F1-score, Recall, and Precision.
+
+- Accuracy: It measures the overall correctness of a model by comparing the number of correct predictions to the total number of predictions made. Mathematically, accuracy is calculated as (TP + TN) / (TP + TN + FP + FN), where TP is True Positives, TN is True Negatives, FP is False Positives, and FN is False Negatives.
+
+- Recall (Sensitivity or True Positive Rate): It measures the ability of a model to correctly identify positive instances from all actual positive instances. It is calculated as TP / (TP + FN), where TP is True Positives and FN is False Negatives. High recall indicates that the model is good at minimizing false negatives.
+
+- Precision: It measures the accuracy of positive predictions made by the model. It is calculated as TP / (TP + FP), where TP is True Positives and FP is False Positives. Precision is important when the cost of false positives is high.
+
+- F1 Score: It is the harmonic mean of precision and recall, providing a balance between the two metrics. It is calculated as 2 _ (Precision _ Recall) / (Precision + Recall). F1 score is useful when there is an uneven class distribution, as it considers both false positives and false negatives.
