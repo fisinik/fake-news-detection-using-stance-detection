@@ -98,20 +98,40 @@ We will evaluate using metrics like Accuracy, F1-score, Recall, and Precision.
 
 Below is the confusion matrix for the Logistic Regression model:
 
+Logistic regression has given a good performance on Unrelated classification (label 3) with 3518 true positives. However, some instances were misclassified as "Discuss" (Label 2), leading to confusion. There was a noticed difficulty in distinguishing between "Agree" (Label 0) and "Discuss" (Label 2), as seen from the 472 samples from the "Discuss" class being misclassified as "Agree.". Predictions for the "Disagree" (Label 1) class were particularly challenging, with a high number of instances incorrectly labeled as "Discuss."
+
+This suggests that the model is effective for separating "Unrelated" articles, but struggles with more subtle distinctions such as between "Agree" and "Discuss.".
+
 ![Logistic Regression Confusion Matrix](logistic_matrix.png)
 
 ### Confusion Matrix for XGBoost
+
+The confusion matrix for XGBoost demonstrates improved performance across all classes. The "Unrelated" class (Label 3) achieved a high true positive count of 3,587, with fewer misclassifications compared to Logistic Regression. XGBoost showed a marked improvement in handling the "Discuss" class, correctly predicting 505 instances, although some were still misclassified as "Unrelated" (Label 3) or "Agree" (Label 0). Predictions for "Agree" (Label 0) and "Disagree" (Label 1) also showed enhanced precision, with fewer instances mislabeled in comparison.
+
+Overall, XGBoost outperformed Logistic Regression, particularly in handling nuanced distinctions between the stance classes, due to its ability to model complex, non-linear relationships in the data.
 
 ![XGBoost Confusion Matrix](xgboost_matrix.png)
 
 ### Confusion Matrix for DistilBERT
 
+DistilBERT demonstrates superior performance across most classification metrics when compared to Logistic Regression and XGBoost. Even using 10 percent of the dataset, its training accuracy of 93.55% and test accuracy of 90.2% indicate robust generalization to unseen data. The model excels particularly in correctly classifying "Unrelated" (Label 3) samples, achieving a substantial number of true positives. This reflects its ability to identify articles with no direct relationship to claims more effectively than the other models.
+
 ![XGBoost Confusion Matrix](distilbert_matrix.png)
+
+However, similar to Logistic Regression and XGBoost, some challenges persist in distinguishing between classes with nuanced relationships. For example, while DistilBERT performs better in separating "Agree" (Label 0) and "Discuss" (Label 2) classes, a certain degree of misclassification still exists, albeit at lower levels compared to Logistic Regression and XGBoost. The confusion matrix shows a notable improvement in minimizing errors across these categories, highlighting DistilBERT's ability to capture subtle contextual relationships that simpler models struggle with.
 
 ### Model Performance Comparison
 
-| Metric              | Logistic Regression | XGBoost |
-| ------------------- | ------------------- | ------- |
-| Training Accuracy   | 80.13%              | 86.34%  |
-| Test Accuracy       | 79.87%              | 83.95%  |
-| Validation Accuracy | 80.59%              | 83.61%  |
+The results in the table above show that DistilBERT outperforms both Logistic Regression and XGBoost in terms of accuracy across training, test, and validation datasets. DistilBERT achieves the highest training accuracy at 93.55%, test accuracy at 90.2%, and validation accuracy at 90.2%. XGBoost follows with a training accuracy of 86.34%, test accuracy of 83.95%, and validation accuracy of 83.61%. Logistic Regression has the lowest performance among the three, with a training accuracy of 80.13%, test accuracy of 79.87%, and validation accuracy of 80.59%.
+
+| Metric              | Logistic Regression | XGBoost | DistilBERT |
+| ------------------- | ------------------- | ------- | ---------- |
+| Training Accuracy   | 80.13%              | 86.34%  | 93.55%     |
+| Test Accuracy       | 79.87%              | 83.95%  | 90.2%      |
+| Validation Accuracy | 80.59%              | 83.61%  | 90.2%      |
+
+These results indicate that DistilBERT, a transformer-based model, is more effective in capturing the nuances of the data compared to the other two algorithms. However, it is also important to consider the computational resources and time required for training these models, as more complex models like DistilBERT typically require more resources. The choice of model should balance accuracy with resource constraints and the specific needs of the application.
+
+## Conclusion
+
+In conclusion, this project demonstrates the effectiveness of using stance detection for fake news identification. By leveraging different machine learning algorithms such as Logistic Regression, XGBoost, and DistilBERT, we were able to achieve significant accuracy in detecting fake news. Each model has its strengths and weaknesses, and the choice of model can depend on the specific requirements and constraints of the application. Future work could involve further optimization of these models, exploring additional features, and integrating more diverse datasets to enhance the robustness and generalizability of the fake news detection system.
